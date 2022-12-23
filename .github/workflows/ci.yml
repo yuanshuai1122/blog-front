@@ -16,8 +16,8 @@ jobs:
           yarn install
           yarn run build
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@master/v3
+        uses: JamesIves/github-pages-deploy-action@develop/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
+          BRANCH: blog-pages
           FOLDER: build
