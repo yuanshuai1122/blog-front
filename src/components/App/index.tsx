@@ -1,12 +1,13 @@
 import React from 'react';
 import './index.css';
-import UserCard from "../UserCard";
+import UserCard2 from "../UserCard2";
 
 function App() {
   return (
     <div>
       Hello Blog!
-        <UserCard/>
+        {/*<UserCard/>*/}
+        <UserCard2/>
     </div>
   );
 }

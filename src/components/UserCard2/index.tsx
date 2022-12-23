@@ -1,16 +1,23 @@
 import React, {useEffect} from 'react';
 import {Avatar, Card} from "antd";
-import Axios from "@/utils/Axios";
+import {getUser} from "../../servers/user";
+
 
 
 const { Meta } = Card;
 
 const UserCard2 = () => {
 
+    // const [user, setUser] = useState();
+
     useEffect(()=> {
-
+        getUser().then((res: any) => {
+            if (res.data.code === 1) {
+                console.log(res.data)
+                //setUser(res.data)
+            }
+        })
     }, [])
-
 
     return (
         <div>
@@ -25,8 +32,8 @@ const UserCard2 = () => {
             >
                 <Meta
                     avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-                    title="Card title"
-                    description="This is the description"
+                    title= "title"
+                    description= "没写出来，尬住了"
                 />
             </Card>
             

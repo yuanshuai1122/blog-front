@@ -1,5 +1,5 @@
 import axios from "axios";
-import {ResultBean} from '@/types/resultBean';
+import {ResultBean} from "../types/resultBean";
 
 
 // axios跨域配置，支持跨域携带cookie
@@ -24,6 +24,7 @@ let result: ResultBean = {
 // 添加请求拦截器
 Axios.interceptors.request.use(function (config) {
     // 在发送请求之前做些什么
+    // eslint-disable-next-line eqeqeq
     if (config.method == 'post') {
         // 这里可能需要 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
 

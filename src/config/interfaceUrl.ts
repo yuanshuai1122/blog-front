@@ -2,7 +2,7 @@
 const reqProtocol = window.location.protocol
 
 // base Url
-let hostUrl = reqProtocol + "//localhost:8088"
+let hostUrl = reqProtocol + "//aabb.yuanshuai.vip"
 
 // =============== 用户相关接口地址 ==================
 
