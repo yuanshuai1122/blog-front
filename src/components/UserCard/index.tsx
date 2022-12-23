@@ -1,6 +1,5 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { Avatar, Card } from 'antd';
-import {render} from "react-dom";
 
 const { Meta } = Card;
 
