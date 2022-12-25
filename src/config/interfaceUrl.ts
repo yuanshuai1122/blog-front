@@ -11,8 +11,15 @@ let hostUrl = reqProtocol + "//aabb.yuanshuai.vip"
  */
 const userInfo = hostUrl + '/user';
 
+// =============== 菜单相关接口地址 ==================
+
+/**
+ * @interface  menuList 查询菜单列表
+ */
+const menuList = hostUrl + "/menus";
 
 
 export {
-    userInfo
+    userInfo,
+    menuList
 }
