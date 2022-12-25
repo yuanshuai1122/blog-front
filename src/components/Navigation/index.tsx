@@ -14,9 +14,10 @@ const Navigation: React.FC = () => {
 
     useEffect(()=> {
         getMenuList().then(res => {
-            if (res.data.code == 1) {
+            if (res.data.code === 1) {
                 console.log(res.data.data)
                 const menuList: { label: string; key: string; icon: JSX.Element; }[] = []
+                // eslint-disable-next-line
                 res.data.data.map((item: any) => {
                     menuList.push({
                         label: item.name,
