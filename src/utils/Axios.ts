@@ -1,5 +1,6 @@
 import axios from "axios";
 import {ResultBean} from "../types/resultBean";
+import {message} from "antd";
 
 
 // axios跨域配置，支持跨域携带cookie
@@ -37,7 +38,12 @@ Axios.interceptors.request.use(function (config) {
 // 添加响应拦截器
 Axios.interceptors.response.use(function (response) {
     // 对响应数据做点什么
-    return response;
+    console.log(response);
+    if (response.status === 200 && response.statusText === 'OK') {
+        return response.data;
+    }else {
+        message.warning('网络请求失败')
+    }
 }, function (error) {
     return Promise.reject(result);
 });
